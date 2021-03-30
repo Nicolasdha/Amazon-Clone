@@ -14,16 +14,53 @@
   margin: 0 20px;
   margin-top: 18px;
 }
+.header__searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
 
 .header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header__searchInput {
+  padding: 10px;
+  height: 12px;
+  border: none;
+  width: 100%;
 }
 
 .header__nav {
+  display: flex;
+  justify-content: space-evenly;
 }
+
 .header__option {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0 10px;
 }
+
 .header__optionLineOne {
+  font-size: 10px;
 }
 
 .header__optionLineTwo {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header_basketCount {
+  margin: 0 10px;
 }
