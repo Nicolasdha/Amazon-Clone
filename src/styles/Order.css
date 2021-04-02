@@ -1,0 +1,40 @@
+.order {
+  border: 1px solid lightgray;
+  background-color: white;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.order__header {
+  padding: 15px 20px;
+  background-color: #f6f6f6;
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgb(196, 196, 196);
+  color: rgb(78, 78, 78);
+}
+
+.order__header > h2 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.order__id {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.order__total {
+  font-weight: 500;
+  text-align: right;
+  padding: 20px;
+}
+.order__delivery {
+  margin: 10px 50px;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.order__delivery > span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
