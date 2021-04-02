@@ -25,17 +25,35 @@
   margin-bottom: 15px;
 }
 
+.product__info:hover {
+  color: #e0a752;
+}
+
 .product_price {
   margin-top: 5px;
 }
 
 .product > button {
-  background: #f0c14b;
+  background: rgb(249, 231, 186);
+  background: linear-gradient(
+    178deg,
+    rgba(249, 231, 186, 1) 4%,
+    rgba(238, 187, 56, 1) 58%
+  );
   border: 1px solid;
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
-  padding: 2px 5px;
+  border-radius: 2px;
+  padding: 5px 10px;
+  width: 100%;
+}
+.product > button:hover {
+  background: rgba(238, 187, 56, 1);
+  cursor: pointer;
+}
+.product > button:focus {
+  outline: 1px solid rgb(241, 196, 81);
 }
 
 .product__rating {

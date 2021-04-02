@@ -59,17 +59,17 @@ function Home() {
         <div className='home__row home__row--first'>
           <Product
             id='215556312'
-            title='The Lean Startup: How Constant Innovation Created Radically Successful Businesses Paperback'
-            price={29.99}
-            image='http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg'
-            rating={2}
+            title='Crucial Conversations Tools for Talking When Stakes Are High, Second Edition Paperback'
+            price={15.61}
+            image='book.jpg'
+            rating={5}
             key={1}
           />
           <Product
             id='2176312'
-            title='Kuccu Stand Mixer, 6 Qt 660W, 6-Speed Tilt-Head Food Dough Mixer, Kitchen Electric Mixer with Stainless Steel Bowl,Dough Hook,Whisk, Beater, Egg white separator (6-QT, Silver-1)'
+            title='Kuccu Stand Mixer, 6 Qt 660W, 6-Speed Tilt-Head Kitchen Electric Mixer with Stainless Steel Bowl'
             price={145.99}
-            image='https://images-na.ssl-images-amazon.com/images/I/71hvYseFrlL._AC_SX522_.jpg'
+            image='mixer.jpg'
             rating={4}
             key={2}
           />
@@ -79,23 +79,24 @@ function Home() {
             price={79.99}
             image='https://images-na.ssl-images-amazon.com/images/I/71JB6hM6Z6L._AC_SY355_.jpg'
             rating={4}
-            key={3}
+            key={4}
           />
+
           <Product
-            id='2156312'
-            title='All-new Echo (4th Gen) | With premium sound, smart home hub, and Alexa | Charcoal'
-            price={79.99}
-            image='https://images-na.ssl-images-amazon.com/images/I/71JB6hM6Z6L._AC_SY355_.jpg'
+            id='33'
+            title='Hydro Flask Water Bottle - Stainless Steel & Vacuum Insulated - Wide Mouth 2.0 with Leak Proof Flex Cap - 20 oz, Black'
+            price={37.95}
+            image='bottle.jpg'
             rating={4}
-            key={3}
+            key={43}
           />
         </div>
         <div className='home__row'>
           <Product
             id='2156312'
-            title='All-new Echo (4th Gen) | With premium sound, smart home hub, and Alexa | Charcoal'
-            price={79.99}
-            image='https://images-na.ssl-images-amazon.com/images/I/71JB6hM6Z6L._AC_SY355_.jpg'
+            title='MOON LENCE Instant Pop Up Camping Tent 4-5 Person Portable Tent Waterproof Windproof for Camping Hiking Mountaineering'
+            price={99.99}
+            image='/tent.jpg'
             rating={4}
             key={3}
           />
@@ -105,7 +106,7 @@ function Home() {
             price={16.99}
             image='https://images-na.ssl-images-amazon.com/images/I/7170G4unQOL._AC_SY355_.jpg'
             rating={4}
-            key={4}
+            key={5}
           />
           <Product
             id='2133412'
@@ -114,7 +115,7 @@ function Home() {
             price={29.99}
             image='https://images-na.ssl-images-amazon.com/images/I/81tjLksKixL._AC_SY355_.jpg'
             rating={4}
-            key={5}
+            key={6}
           />
         </div>
         <div className='home__row'>
@@ -124,7 +125,15 @@ function Home() {
             price={1009.99}
             image='https://images-na.ssl-images-amazon.com/images/I/61TiYyagO9L._AC_SX355_.jpg'
             rating={4}
-            key={6}
+            key={7}
+          />
+          <Product
+            id='43243'
+            title='Echo Show 8 -- HD smart display with Alexa – stay connected with video calling - Charcoal'
+            price={74.99}
+            image='screen.jpg'
+            rating={4}
+            key={4}
           />
         </div>
       </div>
