@@ -67,7 +67,8 @@ After this you will be taken to the Amazon Clone homepage where you will see a p
 
 Card # - 4242 4242 4242 4242<br>
 MM/YY - 04 24<br>
-Zip - 42424
+Zip - 42424<br>
+(Just keep typing 42)
 
 Now the payment will be processed through my Stripe account, and you will be brought to the orders page. Here you will be able to see all the previous orders that have been made! Each order has an individual order ID that is set to the the client_secret.id used to processes the card payment.
 
