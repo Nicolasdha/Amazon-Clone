@@ -6,11 +6,11 @@ import getBasketTotal from "../selector/selector";
 import "../styles/Subtotal.css";
 
 function Subtotal() {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   const history = useHistory();
 
   return (
-    <div className="subtotal">
+    <div className='subtotal'>
       <CurrencyFormat
         renderText={(value) => (
           <React.Fragment>
@@ -18,8 +18,8 @@ function Subtotal() {
               Subtotal ({basket.length} items):
               <strong> {value} </strong>
             </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" /> This order contains a gift
+            <small className='subtotal__gift'>
+              <input type='checkbox' /> This order contains a gift
             </small>
           </React.Fragment>
         )}
@@ -31,7 +31,11 @@ function Subtotal() {
       />
       <button
         onClick={(e) => {
-          history.push("/payment");
+          if (user) {
+            history.push("/payment");
+          } else {
+            history.push("/login");
+          }
         }}
       >
         Proceed to Checkout

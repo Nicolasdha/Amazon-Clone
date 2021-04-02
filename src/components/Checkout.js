@@ -6,15 +6,15 @@ import CheckoutProduct from "./CheckoutProduct";
 
 function Checkout() {
   const [{ basket, user }] = useStateValue();
-
+  console.log(user);
   return (
-    <div className="checkout">
-      <div className="checkout__left">
-        <img className="checkout__ad" src="/ad.png" alt="" />
+    <div className='checkout'>
+      <div className='checkout__left'>
+        <img className='checkout__ad' src='/ad.png' alt='' />
 
         <div>
           <h3>Hello, {user ? user.email : "Guest"}</h3>
-          <h2 className="checkout__title">Your Shopping Basket</h2>
+          <h2 className='checkout__title'>Your Shopping Basket</h2>
           {basket.map((basketItem, index) => (
             <CheckoutProduct
               id={basketItem.id}
@@ -28,7 +28,7 @@ function Checkout() {
         </div>
       </div>
 
-      <div className="checkout__right">
+      <div className='checkout__right'>
         <Subtotal />
       </div>
     </div>
