@@ -11,7 +11,7 @@ const stripe = require("stripe")(
 const app = express();
 
 // Middlewares
-app.use(cors);
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 // API Routes
@@ -23,16 +23,21 @@ app.get("/nicolas", (request, response) =>
 
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
-  console.log("this is ze total", total);
 
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: total,
-    curreny: "usd",
-  });
+  const paymentIntent = await stripe.paymentIntents
+    .create({
+      amount: total,
+      currency: "usd",
+    })
+    .catch((e) => {
+      console.log("Error: Processing payment that is undefined");
+    });
 
-  response.status(201).send({
-    clientSecret: paymentIntent.client_secret,
-  });
+  if (paymentIntent !== undefined) {
+    response.status(201).send({
+      clientSecret: paymentIntent.client_secret,
+    });
+  }
 });
 
 // Listen command
