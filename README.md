@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Amazone Clone with API and Payment Processing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
 
-## Available Scripts
+Hello! The is a Clone of Amazon with full E-Commerce functionality! It features a full secure user-authentification through user supplied email/password, and a fully functioning back-end with credit card payment processing through Stripe. The database (Google Firestore) stores all information associated with the user including email/password, and previous orders made.
 
-In the project directory, you can run:
+The backend uses Google Firestore's Cloud Functions to host an API I created for processing credit card payments.
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- <a href= https://github.com/Nicolasdha/Expense-Application-React-Redux#Technologies>Technologies</a>
+- <a href= https://github.com/Nicolasdha/Expense-Application-React-Redux#Launch>Launch</a>
+- <a href= https://github.com/Nicolasdha/Expense-Application-React-Redux#Structure> Structure</a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Technologies
 
-### `yarn test`
+This application was created using the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Languages/Markup:
 
-### `yarn build`
+- Javascript
+- CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frameworks/Utilities:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React^17.0.1
+- ExpressJS
+- NodeJS
+- Stripe (Credit card processing)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Middleware:
 
-### `yarn eject`
+- Cors
+- Express.json()
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Compilers/Bundlers:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Webpack
+- Bable
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Platforms/Database:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Google Firestore
+- Google Cloud Functions
 
-## Learn More
+Third-Party Libraries:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Axios
+- Moment
+- Material-ui
+- react-currency-format
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Launch
 
-### Code Splitting
+This application is initalized using Google Firebase. Please follow this hyperlink to be taken to where this application is hosted:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href=ndurikhaecommclone.web.app> Amazon Clone - Fully Functional E-Commerce</a>
 
-### Analyzing the Bundle Size
+### Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To use this application please create an account an email and password, or feel free to use the test email/password
+email: test123@test.com password: test123. After this you will be taken to the Amazon Clone homepage where you will see a products! These are hard coded in, but I am looking for an API that I would be able to pull products from dynamically. Here you can add the products to your cart. Once you have some products in your cart, click the top-righthand cart section to be taken to the checkout page. Click on Proceed to Checkout where you will be brought to the payment page. Use the following card credentials to check out:
 
-### Making a Progressive Web App
+Card # - 4242 4242 4242 4242
+MM/YY - 04 24
+Zip - 42424
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Now the payment will be processed through my Stripe account, and you will be brought to the orders page. Here you will be able to see all the previous orders that have been made!
 
-### Advanced Configuration
+All without a single page refresh of course!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Thank you for visiting! <br><br><br>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- ![Logo](https://i.ibb.co/nr2trL4/Screen-Shot-2020-09-08-at-4-20-44-PM.png) -->
