@@ -23,7 +23,7 @@ Languages/Markup:
 
 Frameworks/Utilities:
 
-- React^17.0.1
+- React^17.0.2
 - ExpressJS
 - NodeJS
 - Stripe (Credit card processing)
