@@ -6,7 +6,7 @@ import getBasketTotal from "../selector/selector";
 import "../styles/Subtotal.css";
 
 function Subtotal() {
-  const [{ basket, user }] = useStateValue();
+  const [{ basket }] = useStateValue();
   const history = useHistory();
 
   return (
@@ -31,11 +31,7 @@ function Subtotal() {
       />
       <button
         onClick={(e) => {
-          if (user) {
-            history.push("/payment");
-          } else {
-            history.push("/login");
-          }
+          history.push("/payment");
         }}
       >
         Proceed to Checkout

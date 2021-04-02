@@ -1,11 +1,10 @@
 import React from "react";
-import { v4 as uuid } from "uuid";
 import { useStateValue } from "../context/stateProvider";
 
 import "../styles/CheckoutProduct.css";
 
 function CheckoutProduct({ id, title, image, price, rating, hideButton }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
     dispatch({ type: "REMOVE_FROM_BASKET", id });

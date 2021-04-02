@@ -7,6 +7,7 @@ import "../styles/Header.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../context/stateProvider";
 import { auth } from "../firebase/firebase";
+import { useHistory } from "react-router-dom";
 
 function Header() {
   const [{ basket, user }] = useStateValue();
@@ -16,6 +17,8 @@ function Header() {
       auth.signOut();
     }
   };
+
+  const history = useHistory();
 
   return (
     <div className='header__container'>
@@ -63,15 +66,22 @@ function Header() {
             <span className='header__optionLineOne'>Your</span>
             <span className='header__optionLineTwo'>Prime</span>
   </div>*/}
-          <Link to='/checkout'>
-            <div className='header__optionBasket'>
-              <ShoppingCartIcon />
-              <span className='header__optionLineTwo header_basketCount'>
-                <span className='header__basketLength'>{basket.length}</span>
-                <span>Cart</span>
-              </span>
-            </div>
-          </Link>
+          <div
+            className='header__optionBasket'
+            onClick={() => {
+              if (user) {
+                history.push("/checkout");
+              } else {
+                history.push("/login");
+              }
+            }}
+          >
+            <ShoppingCartIcon />
+            <span className='header__optionLineTwo header_basketCount'>
+              <span className='header__basketLength'>{basket.length}</span>
+              <span>Cart</span>
+            </span>
+          </div>
         </div>
       </div>
       <div className='subHeader'>

@@ -5,7 +5,7 @@ import { database } from "../firebase/firebase";
 import Order from "./Order";
 
 function Orders() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function Orders() {
     } else {
       setOrders([]);
     }
-  }, [user]);
+  }, [user, dispatch]);
 
   return (
     <div className='orders'>

@@ -6,7 +6,7 @@ function Home() {
   const heroImages = ["/hero1.jpg", "/hero2.jpg", "/hero4.jpg"];
   const delay = 4000;
 
-  const [index, setIndex] = React.useState(0);
+  const [index, setIndex] = useState(0);
   const timeoutRef = React.useRef(null);
 
   function resetTimeout() {
@@ -28,7 +28,7 @@ function Home() {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index, heroImages]);
 
   return (
     <div className='home'>
@@ -39,7 +39,12 @@ function Home() {
             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
           >
             {heroImages.map((image, index) => (
-              <img className='slide home__image' key={index} src={image}></img>
+              <img
+                className='slide home__image'
+                key={index}
+                src={image}
+                alt=''
+              ></img>
             ))}
           </div>
 

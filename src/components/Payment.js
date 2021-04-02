@@ -12,7 +12,7 @@ import { database } from "../firebase/firebase";
 function Payment() {
   const history = useHistory();
 
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   const stripe = useStripe();
   const elements = useElements();
@@ -44,14 +44,13 @@ function Payment() {
     e.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe
+    await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
         },
       })
       .then(({ paymentIntent }) => {
-        console.log("paymentIntent", paymentIntent);
         setSucceeded(true);
         setError(null);
         setProcessing(false);
@@ -60,7 +59,6 @@ function Payment() {
         In the collection users in the document we are accessing is user.id then to that users orders in the documnet of paymnet id we are setting the things purcahsed, amount, when purcahsed 
          */
 
-        console.log("user is >>>>", user);
         database
           .collection("users")
           .doc(user.uid)
