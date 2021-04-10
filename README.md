@@ -54,7 +54,7 @@ Third-Party Libraries:
 
 This application is initalized using Google Firebase. Please follow this hyperlink to be taken to where this application is hosted:
 
-<a href=ndurikhaecommclone.web.app> Amazon Clone - Fully Functional E-Commerce</a>
+<a href='https://ndurikhaecommclone.web.app'> Amazon Clone - Fully Functional E-Commerce</a>
 
 ### Structure
 
